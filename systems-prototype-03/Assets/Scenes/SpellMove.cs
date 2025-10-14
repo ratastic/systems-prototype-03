@@ -13,6 +13,7 @@ public class SpellMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = new Vector2(0, spellSpeed);
+        Debug.Log("hello");
     }
 
     // Update is called once per frame
