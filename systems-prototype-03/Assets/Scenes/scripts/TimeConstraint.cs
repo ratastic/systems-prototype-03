@@ -7,7 +7,7 @@ using System.Collections;
 public class TimeConstraint : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float juggleTime;
+    public float juggleTime;
     public bool timerIsRunning;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
