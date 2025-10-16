@@ -6,6 +6,8 @@ using System.Collections;
 
 public class PentacleLogic : MonoBehaviour
 {
+    public TimeConstraint tc;
+    public WandLogic wl;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,7 @@ public class PentacleLogic : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("ball01") && col.gameObject.CompareTag("ball02"))
+        if (col.gameObject.CompareTag("ball01") || col.gameObject.CompareTag("ball02"))
         {
             GameOver();
         }
@@ -28,6 +30,7 @@ public class PentacleLogic : MonoBehaviour
 
     public void GameOver()
     {
-
+        tc.timerIsRunning = false;
+        wl.canCast = false;
     }
 }

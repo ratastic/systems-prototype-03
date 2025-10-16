@@ -6,6 +6,8 @@ TagManager:
   tags:
   - seesaw
   - ballBounds
+  - ball01
+  - ball02
   layers:
   - Default
   - TransparentFX

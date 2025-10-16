@@ -13,14 +13,13 @@ public class TimeConstraint : MonoBehaviour
     void Start()
     {
         juggleTime = 0f;
-        timerIsRunning = true;
+        timerIsRunning = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        juggleTime += Time.deltaTime;
         UpdateTimerUI();
     }
 
@@ -28,6 +27,7 @@ public class TimeConstraint : MonoBehaviour
     {
         if (timerIsRunning == true)
         {
+            juggleTime += Time.deltaTime;
             int minutes = Mathf.FloorToInt(juggleTime / 60);
             int seconds = Mathf.FloorToInt(juggleTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
